@@ -1,4 +1,3 @@
-# main.py
 from data_produk import katalog_produk as katalog_default, database_member as member_default
 from storage import (
     ambil_riwayat, 
@@ -9,10 +8,9 @@ from storage import (
     simpan_member
 )
 from struk import cetak_struk
-from search import tampilkan_hasil_pencarian  # <-- Import modul search baru
+from search import tampilkan_hasil_pencarian
 
 def jalankan_kasir():
-    # Muat data persisten saat aplikasi pertama kali dijalankan
     katalog_produk = muat_katalog(katalog_default)
     database_member = muat_member(member_default)
     
@@ -21,7 +19,7 @@ def jalankan_kasir():
     while True:
         print("\n=== APLIKASI KASIR MODULAR (DAY 31) ===")
         print("1. Lihat Katalog & Stok Produk")
-        print("2. Cari Produk (Search)")             # <-- Menu Baru
+        print("2. Cari Produk (Search)") 
         print("3. Tambah Barang ke Keranjang")
         print("4. Lihat Keranjang Belanja")
         print("5. Checkout & Pembayaran (Diskon, Multi-Metode & Struk)")
@@ -29,7 +27,7 @@ def jalankan_kasir():
         print("7. Restock / Tambah Stok Produk")
         print("8. Tambah Produk Baru ke Katalog")
         print("9. Registrasi Member Baru")
-        print("10. Keluar")                           # <-- Bergeser jadi 10
+        print("10. Keluar")                          
         
         pilihan_input = input("Pilih menu (1-10): ").strip()
         
@@ -45,7 +43,7 @@ def jalankan_kasir():
                 print(f"[{kode}] {info['nama']} - Rp {info['harga']:,} | Stok: {info['stok']}")
                 
         elif pilihan == 2:
-            # Fitur Pencarian Produk (Search)
+            
             tampilkan_hasil_pencarian(katalog_produk)
                 
         elif pilihan == 3:
@@ -183,7 +181,6 @@ def jalankan_kasir():
                 print("❌ Metode pembayaran tidak dikenal. Transaksi dibatalkan.")
                 continue
             
-            # Kurangi stok produk berdasarkan barang yang dibeli
             for item_beli in keranjang:
                 for kode, info in katalog_produk.items():
                     if info["nama"] == item_beli["nama"]:
