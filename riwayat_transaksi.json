@@ -1,0 +1,62 @@
+[
+    {
+        "status_member": "Member (MEMBER01)",
+        "metode_pembayaran": "QRIS",
+        "items": [
+            {
+                "nama": "Beras 5kg",
+                "harga_satuan": 65000,
+                "qty": 5,
+                "subtotal": 325000
+            }
+        ],
+        "total_kotor": 325000,
+        "diskon": 32500,
+        "total_bersih": 292500
+    },
+    {
+        "status_member": "Non-Member",
+        "metode_pembayaran": "QRIS",
+        "items": [
+            {
+                "nama": "Mie Instan",
+                "harga_satuan": 3500,
+                "qty": 10,
+                "subtotal": 35000
+            }
+        ],
+        "total_kotor": 35000,
+        "diskon": 0,
+        "total_bersih": 35000
+    },
+    {
+        "status_member": "Non-Member",
+        "metode_pembayaran": "Transfer Bank (Mandiri)",
+        "items": [
+            {
+                "nama": "Minyak Goreng",
+                "harga_satuan": 25000,
+                "qty": 15,
+                "subtotal": 375000
+            }
+        ],
+        "total_kotor": 375000,
+        "diskon": 0,
+        "total_bersih": 375000
+    },
+    {
+        "status_member": "Non-Member",
+        "metode_pembayaran": "QRIS",
+        "items": [
+            {
+                "nama": "Beras 5kg",
+                "harga_satuan": 65000,
+                "qty": 5,
+                "subtotal": 325000
+            }
+        ],
+        "total_kotor": 325000,
+        "diskon": 0,
+        "total_bersih": 325000
+    }
+]
