@@ -8,7 +8,6 @@ def cari_produk(katalog, kata_kunci):
     hasil = {}
 
     for kode, info in katalog.items():
-        # Cek apakah kata kunci cocok dengan Kode atau Nama Produk
         if kata_kunci in kode.lower() or kata_kunci in info["nama"].lower():
             hasil[kode] = info
 
